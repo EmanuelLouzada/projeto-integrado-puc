@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:backgroundTint="@color/lightBlue"
+            app:cardCornerRadius="@dimen/route_card_radius"
+            app:cardElevation="0dp"
+            app:cardForegroundColor="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@color/stroke_color"
+            app:strokeWidth="1dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/localidade_text_label"
+                    style="@style/PrimaryText.Light.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:text="@string/localidade"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/localidade_text_field"
+                    style="@style/PrimaryText.Light.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/localidade_text_label"
+                    app:layout_constraintStart_toEndOf="@+id/localidade_text_label"
+                    tools:text="21024" />
+
+                <TextView
+                    android:id="@+id/lista_text_label"
+                    style="@style/PrimaryText.Light.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="@string/lista"
+                    app:layout_constraintStart_toStartOf="@+id/localidade_text_label"
+                    app:layout_constraintTop_toBottomOf="@+id/localidade_text_label" />
+
+                <TextView
+                    android:id="@+id/lista_text_field"
+                    style="@style/PrimaryText.Light.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/lista_text_label"
+                    app:layout_constraintStart_toEndOf="@+id/lista_text_label"
+                    tools:text="2" />
+
+                <TextView
+                    android:id="@+id/membro_text_label"
+                    style="@style/PrimaryText.Light.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="@string/membro"
+                    app:layout_constraintStart_toStartOf="@+id/lista_text_label"
+                    app:layout_constraintTop_toBottomOf="@+id/lista_text_label" />
+
+                <TextView
+                    android:id="@+id/membro_text_field"
+                    style="@style/PrimaryText.Light.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/membro_text_label"
+                    app:layout_constraintStart_toEndOf="@+id/membro_text_label"
+                    tools:text="1" />
+
+                <TextView
+                    android:id="@+id/exec_text_label"
+                    style="@style/PrimaryText.Light.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginBottom="@dimen/margin_normal"
+                    android:text="@string/exec"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/membro_text_label"
+                    app:layout_constraintTop_toBottomOf="@+id/membro_text_label" />
+
+                <TextView
+                    android:id="@+id/exec_text_field"
+                    style="@style/PrimaryText.Light.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/exec_text_label"
+                    app:layout_constraintStart_toEndOf="@+id/exec_text_label"
+                    tools:text="0" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.52" />
+
+                <TextView
+                    android:id="@+id/quantidade_text_label"
+                    style="@style/PrimaryText.Light.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:text="@string/quantidade"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/localidade_text_label"
+                    app:layout_constraintStart_toStartOf="@+id/guideline2" />
+
+
+                <TextView
+                    android:id="@+id/quantidade_text_field"
+                    style="@style/PrimaryText.Light.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/quantidade_text_label"
+                    app:layout_constraintStart_toEndOf="@+id/quantidade_text_label"
+                    tools:text="419" />
+
+                <TextView
+                    android:id="@+id/quantidade_tb_text_label"
+                    style="@style/PrimaryText.Light.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/quantidade_tb"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/lista_text_label"
+                    app:layout_constraintStart_toStartOf="@+id/quantidade_text_label" />
+
+                <TextView
+                    android:id="@+id/quantidade_tb_text_field"
+                    style="@style/PrimaryText.Light.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/quantidade_tb_text_label"
+                    app:layout_constraintStart_toEndOf="@+id/quantidade_tb_text_label"
+                    tools:text="1" />
+
+                <TextView
+                    android:id="@+id/lidos_text_label"
+                    style="@style/PrimaryText.Light.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lidos"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/membro_text_label"
+                    app:layout_constraintStart_toStartOf="@+id/quantidade_tb_text_label" />
+
+                <TextView
+                    android:id="@+id/lidos_text_field"
+                    style="@style/PrimaryText.Light.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/lidos_text_label"
+                    app:layout_constraintStart_toEndOf="@+id/lidos_text_label"
+                    tools:text="0" />
+
+                <TextView
+                    android:id="@+id/descarregados_text_label"
+                    style="@style/PrimaryText.Light.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/descarregados"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/exec_text_label"
+                    app:layout_constraintStart_toStartOf="@+id/lidos_text_label" />
+
+                <TextView
+                    android:id="@+id/descarregados_text_field"
+                    style="@style/PrimaryText.Light.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/descarregados_text_label"
+                    app:layout_constraintStart_toEndOf="@+id/descarregados_text_label"
+                    tools:text="0" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

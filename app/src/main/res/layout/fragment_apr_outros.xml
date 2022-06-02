@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/txt_outros_controles"
+        android:text="Outros controles"
+        style="@style/form_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/edt_txt_outros_controles"
+        android:layout_width="00dp"
+        android:layout_height="100dp"
+        android:gravity="top"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        android:background="#C5C5C5"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_outros_controles" />
+
+    <TextView
+        android:id="@+id/txt_planilha_risco_consultada"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="100dp"
+        android:text="Planilha de riscos consultada?"
+        android:textColor="#000000"
+        android:textSize="@dimen/form_subtitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_txt_outros_controles" />
+
+
+        <RadioGroup
+            android:layout_width="189dp"
+            android:layout_height="38dp"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_txt_outros_controles">
+
+            <RadioButton
+                android:id="@+id/radio_sim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sim" />
+
+            <RadioButton
+                android:id="@+id/radio_nao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Não" />
+        </RadioGroup>
+
+        <TextView
+        android:id="@+id/txt_comentarios"
+        android:layout_width="00dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        android:text="Comentários"
+        android:textColor="#000000"
+        android:textSize="@dimen/form_subtitulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_planilha_risco_consultada" />
+
+
+    <EditText
+        android:id="@+id/edt_txt_comentarios"
+        android:layout_width="00dp"
+        android:layout_height="100dp"
+        android:gravity="top"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:background="#C5C5C5"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_comentarios" />
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_save"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="@dimen/side_margin_page"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="@dimen/side_margin_page"
+            android:background="@drawable/gradient_blue_color"
+            android:text="Salvar"
+            android:onClick="save"
+            android:textAllCaps="false"
+            android:textColor="@color/lightPaleGrey"
+            android:textSize="@dimen/text_size_h2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_txt_comentarios" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    </layout>

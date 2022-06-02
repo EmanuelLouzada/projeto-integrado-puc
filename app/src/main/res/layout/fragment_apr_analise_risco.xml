@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txt_lista_tarefas"
+        android:text="Tarefas críticas(autorização OS)"
+        style="@style/form_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:background="@color/design_default_color_on_primary"
+        android:paddingLeft="@dimen/margin_large3"
+        android:paddingRight="@dimen/margin_large3"
+        android:layout_marginTop="@dimen/margin_normal"
+        app:layout_constraintTop_toBottomOf="@+id/txt_lista_tarefas">
+
+        <TableLayout
+            android:layout_width="400dp"
+            android:layout_height="match_parent"
+            android:paddingRight="@dimen/margin_large3"
+            android:stretchColumns="1">
+
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Trabalho a quente" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_trabalho_quente"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Içamento" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_icamento"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Trabalho em altura" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_trabalho_altura"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />/>
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Ambientes confinados" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_ambientes_confinados"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />/>
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Subs.química perigosa" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_subs_perigosa"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />/>
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Explosivos" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_explosivos"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />/>
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Média e alta tensão - NR 10	" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_media_alta_tensao_NR10"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />/>
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Escavação acima de 0,5 m" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_escavacao_acima_05"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />/>
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Manutenção em equip.energizado" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_manutencao_equip_energ"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />/>
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Numeração operativa de equipamento" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_numeracao_operativa_equip"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />/>
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Numeração operativa em equipamentos energizados" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_numeraocao_operativa_equip_energizados"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />/>
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Manutenção em equip.desenergizado" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxcones_manutencao_equip_desenergizado"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />/>
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Coordenação de manobra in loco" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_coordenacao_manobra_inloco"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />/>
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Levantamento de dados em área energizada" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_levantamento_dados_area_energizada"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />/>
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Medição de sequência de fases em equip.energizado" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_medicao_seq_fases_equip_energ"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />/>
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Manut. quadro comando energizado" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_manut_quadro_comando_energ"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />/>
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Manut. quadro comando desenergizado" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_manut_quadro_comando_desenerg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />/>
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Manut.grupo gerador diesel" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_manut_grupo_gerador_diesel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />/>
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Realização de testes funcionais/operacionais de equipamento" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_realizacao_testes_funcionais_oper_equip"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />/>
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Outros (ver matriz de risco)" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_outros_matriz_risco"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />/>
+
+            </TableRow>
+         </TableLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+

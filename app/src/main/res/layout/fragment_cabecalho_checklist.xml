@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/top_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/txt_dados_iniciais"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="DADOS INICIAIS"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_h2"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+
+        <TextView
+            android:id="@+id/txt_funcionario"
+            android:layout_width="0dp"
+            android:layout_height="10pt"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="50dp"
+            android:text="Funcionário"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toStartOf="@+id/spinner_funcionario"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+
+        <Spinner
+            android:id="@+id/spinner_funcionario"
+            android:layout_width="0dp"
+            android:layout_height="10pt"
+            android:layout_marginTop="70dp"
+            android:layout_marginRight="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txt_funcionario"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+
+        <TextView
+            android:id="@+id/txt_localidade"
+            android:layout_width="0dp"
+            android:layout_height="10pt"
+            android:layout_marginTop="@dimen/margin_large2"
+            android:layout_marginLeft="50dp"
+            android:text="Localidade"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toStartOf="@+id/spinner_localidade"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_funcionario" />
+
+
+        <Spinner
+            android:id="@+id/spinner_localidade"
+            android:layout_width="0dp"
+            android:layout_height="10pt"
+            android:layout_marginTop="@dimen/margin_large2"
+            android:layout_marginRight="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txt_localidade"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_funcionario" />
+
+
+        <TextView
+            android:id="@+id/txt_Atividade"
+            android:layout_width="0dp"
+            android:layout_height="10pt"
+            android:layout_marginTop="@dimen/margin_large2"
+            android:layout_marginLeft="50dp"
+            android:text="Atividade"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toStartOf="@+id/spinner_atividade"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_localidade" />
+
+        <Spinner
+            android:id="@+id/spinner_atividade"
+            android:layout_width="0dp"
+            android:layout_height="10pt"
+            android:layout_marginTop="@dimen/margin_large2"
+            android:layout_marginRight="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txt_Atividade"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_localidade" />
+
+        <TextView
+            android:id="@+id/txt_diretoria"
+            android:layout_width="0dp"
+            android:layout_height="10pt"
+            android:layout_marginTop="@dimen/margin_large2"
+            android:layout_marginLeft="50dp"
+            android:text="Diretoria"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toStartOf="@+id/spinner_diretoria"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_Atividade" />
+
+        <Spinner
+            android:id="@+id/spinner_diretoria"
+            android:layout_width="0dp"
+            android:layout_height="10pt"
+            android:layout_marginTop="@dimen/margin_large2"
+            android:layout_marginRight="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txt_diretoria"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_atividade" />
+        ,
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_entrar"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginStart="@dimen/side_margin_page"
+            android:layout_marginEnd="@dimen/side_margin_page"
+            android:background="@color/green"
+            android:text="Entrar"
+            android:textAllCaps="false"
+            android:textColor="@color/lightPaleGrey"
+            android:textSize="@dimen/text_size_h2"
+            app:layout_constraintTop_toBottomOf="@+id/txt_diretoria" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

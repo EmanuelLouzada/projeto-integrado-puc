@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Checklist</string>
+    <string name="home_screen_name">Home</string>
+    <string name="checklist_screen_name">Checklist</string>
+    <string name="checklistDiarioEPI_screen_name">Checklist Diário EPI</string>
+    <string name="checklistDiarioEPC_screen_name">Checklist Diário EPC</string>
+    <string name="homeAPR_screen_name">Análise Preliminar de Risco</string>
+    <string name="inspecaoVeicular_screen_name">Inspeção Diária de Veículo</string>
+    <string name="cabecalhoChecklist_screen_name">Checklist</string>
+    <string name="error_message">Erro! Tente novamente!</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="change_language_message">O idioma precisa estar configurado como Português(Brasil)!</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="page_title">Page Title</string>
+
+    <string name="sair">Sair</string>
+    <string name="alerta_itens_pendentes">Ainda tem itens a serem descarregados. A operação de carga excluirá todos esses itens.</string>
+    <string name="load_screen_name">Carga</string>
+    <string name="unload_screen_name">Descarga</string>
+    <string name="settings">Configurações</string>
+    <string name="url_web_service_hint_text">URL Web Service</string>
+    <string name="porta_web_service_hint_text">Porta Web Service</string>
+    <string name="debug_switch_text">Debug</string>
+    <string name="back_button_text">Voltar</string>
+    <string name="save_button_text">Salvar</string>
+    <string name="finish_button_text">Finalizar</string>
+    <string name="attention">ATENÇÃO</string>
+    <string name="sucesso">Sucesso</string>
+    <string name="load_text">%1$s…OK \n</string>
+
+    <string-array name="opcoes_sim_nao">
+        <item>Sim</item>
+        <item>Não</item>
+        <item>Na</item>
+    </string-array>
+    <string-array name="values_sim_nao">
+        <item>S</item>
+        <item>N</item>
+        <item>0</item>
+    </string-array>
+</resources>

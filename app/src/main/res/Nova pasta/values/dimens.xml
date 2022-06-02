@@ -1,0 +1,29 @@
+<resources>
+    <!-- Common dimensions -->
+    <dimen name="margin_normal">8dp</dimen>
+    <dimen name="margin_small">4dp</dimen>
+
+    <dimen name="margin_large1">32dp</dimen>
+    <dimen name="margin_large2">24dp</dimen>
+    <dimen name="margin_large3">16dp</dimen>
+
+    <dimen name="side_margin_page">48dp</dimen>
+    <dimen name="page_margin_botton">64dp</dimen>
+
+    <dimen name="padding_large">16dp</dimen>
+    <dimen name="padding_normal">8dp</dimen>
+    <dimen name="padding_micro">4dp</dimen>
+
+    <dimen name="text_size_h1">22sp</dimen>
+    <dimen name="text_size_h2">20sp</dimen>
+    <dimen name="text_size_h3">18sp</dimen>
+
+    <!-- Icons -->
+    <dimen name="icon_padding">24dp</dimen>
+    <dimen name="route_card_radius">10dp</dimen>
+    <dimen name="row_layout_padding">10dp</dimen>
+    <dimen name="branding_margin_left">52dp</dimen>
+    <dimen name="version_margin_right">52dp</dimen>
+
+
+</resources>

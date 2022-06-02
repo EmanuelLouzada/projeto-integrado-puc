@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.tees.checklist.ui.screens.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.tees.checklist.ui.screens.home.HomeFragment"
+        android:label="homeFragment"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_loadFragment"
+            app:destination="@id/loadFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_homeFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_homeFragment_to_unloadFragment"
+            app:destination="@id/unloadFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_homeFragment_to_checklistFragment"
+            app:destination="@id/checklistFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_homeFragment_to_CabecalhoChecklistFragment2"
+            app:destination="@id/CabecalhoChecklistFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:popUpToInclusive="true"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/loadFragment"
+        android:name="com.tees.checklist.ui.screens.load.LoadFragment"
+        android:label="LoadFragment"
+        tools:layout="@layout/fragment_load"/>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.tees.checklist.ui.screens.settings.SettingsFragment"
+        android:label="SettingsFragment"
+        tools:layout="@layout/fragment_settings"/>
+
+
+    <fragment
+        android:id="@+id/unloadFragment"
+        android:name="com.tees.checklist.ui.screens.unload.UnloadFragment"
+        android:label="UnloadFragment"
+        tools:layout="@layout/fragment_load"/>
+
+    <fragment
+        android:id="@+id/checklistFragment"
+        android:name="com.tees.checklist.ui.screens.checklist.ChecklistFragment"
+        android:label="fragment_checklist"
+        tools:layout="@layout/fragment_checklist" >
+
+        <action
+            android:id="@+id/action_checklistFragment_to_checklistDiarioEPIFragment"
+            app:destination="@id/checklistDiarioEPIFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_checklistFragment_to_checklistDiarioEPCFragment"
+            app:destination="@id/checklistDiarioEPCFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_checklistFragment_to_HomeAPRFragment"
+            app:destination="@id/HomeAPRFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:popUpToInclusive="true"/>
+
+        <action
+            android:id="@+id/action_checklistFragment_to_inspecaoDiariaVeiculoFragment"
+            app:destination="@id/inspecaoDiariaVeiculoFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/inspecaoDiariaVeiculoFragment"
+        android:name="com.tees.checklist.ui.screens.inspecaoVeicular.InspecaoDiariaVeiculoFragment"
+        android:label="UnloadFragment"
+        tools:layout="@layout/fragment_inspecao_diaria_veiculo2" />
+
+    <fragment
+        android:id="@+id/checklistDiarioEPIFragment"
+        android:name="com.tees.checklist.ui.screens.checklistDiarioEPI.ChecklistDiarioEPIFragment"
+        android:label="UnloadFragment"
+        tools:layout="@layout/fragment_checklist_diario_epi" />
+
+    <fragment
+        android:id="@+id/checklistDiarioEPCFragment"
+        android:name="com.tees.checklist.ui.screens.checklistDiarioEPC.ChecklistDiarioEPCFragment"
+        android:label="UnloadFragment"
+        tools:layout="@layout/fragment_checklist_diario_epc" />
+
+    <fragment
+        android:id="@+id/HomeAPRFragment"
+        android:name="com.tees.checklist.ui.screens.homeAPR.HomeAPRFragment"
+        android:label="UnloadFragment"
+        tools:layout="@layout/fragment_home_apr" />
+
+    <fragment
+        android:id="@+id/CabecalhoChecklistFragment"
+        android:name="com.tees.checklist.ui.screens.cabecalhoChecklist.CabecalhoChecklistFragment"
+        android:label="UnloadFragment"
+        tools:layout="@layout/fragment_cabecalho_checklist" >
+        <action
+            android:id="@+id/action_CabecalhoChecklistFragment_to_checklistFragment"
+            app:destination="@id/checklistFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+
+</navigation>

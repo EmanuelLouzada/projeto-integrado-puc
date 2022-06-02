@@ -1,0 +1,987 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/top_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/txt_equipamento_seguranca"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="EQUIPAMENTOS DE SEGURANÇA"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="@dimen/text_size_h2"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+
+    <TextView
+        android:id="@+id/txt_funcionario"
+        android:layout_width="0dp"
+        android:layout_height="10pt"
+        android:layout_marginTop="@dimen/margin_large2"
+        android:paddingLeft="@dimen/margin_large2"
+        android:text="Funcionário"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toStartOf="@+id/spinner_funcionario"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_equipamento_seguranca" />
+
+
+    <Spinner
+        android:id="@+id/spinner_funcionario"
+        android:layout_width="0dp"
+        android:layout_height="10pt"
+        android:layout_marginTop="@dimen/margin_large2"
+        android:layout_marginRight="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_funcionario"
+        app:layout_constraintTop_toBottomOf="@+id/txt_equipamento_seguranca" />
+
+
+    <TextView
+        android:id="@+id/txt_veiculo"
+        android:layout_width="0dp"
+        android:layout_height="10pt"
+        android:layout_marginTop="@dimen/margin_large2"
+        android:paddingLeft="@dimen/margin_large2"
+        android:text="Veículo"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toStartOf="@+id/spinner_veiculo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_funcionario" />
+
+    <Spinner
+        android:id="@+id/spinner_veiculo"
+        android:layout_width="0dp"
+        android:layout_height="10pt"
+        android:layout_marginTop="@dimen/margin_large2"
+        android:layout_marginRight="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_veiculo"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_funcionario"
+        />
+
+
+    <TextView
+        android:id="@+id/txt_km_atual"
+        android:layout_width="0dp"
+        android:layout_height="10pt"
+        android:layout_marginTop="@dimen/margin_large2"
+        android:paddingLeft="@dimen/margin_large2"
+        android:text="Km Atual"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toStartOf="@+id/edt_km_atual"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_veiculo" />
+
+
+
+    <EditText
+        android:id="@+id/edt_km_atual"
+        android:layout_width="0dp"
+        android:layout_height="10pt"
+        android:layout_marginTop="@dimen/margin_large2"
+        android:layout_marginRight="50dp"
+        android:background="#C5C5C5"
+        android:gravity="top"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_km_atual"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_veiculo" />
+
+
+    <TableLayout
+        android:id="@+id/tablelayout1"
+        android:layout_width="395dp"
+        android:layout_height="241dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="@dimen/margin_large2"
+        android:paddingLeft="@dimen/margin_large2"
+        android:stretchColumns="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_km_atual">
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/lightBlue"
+                android:text="Itens"
+                android:textAlignment="center"
+                android:textColor="#FFF"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_marginRight="50dp"
+                android:layout_weight="1"
+                android:background="@color/lightBlue"
+                android:text="Equipamentos"
+                android:textAlignment="center"
+                android:textColor="#FFF"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:layout_marginRight="50dp"
+            android:background="@color/design_default_color_on_primary"
+            app:layout_constraintTop_toBottomOf="@+id/edt_km_atual">
+
+
+        <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="1">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Bancos do carro" />
+
+                    <Spinner
+                        android:id="@+id/spinner_bancosdocarro"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="Câmera interna" />
+
+            <Spinner
+                android:id="@+id/spinner_camerainterna"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:entries="@array/opcoes_sim_nao"
+                android:textAlignment="center"/>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="Pisca Alerta" />
+
+            <Spinner
+                android:id="@+id/spinner_piscaalerta"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:entries="@array/opcoes_sim_nao"
+                android:textAlignment="center"/>
+        </TableRow>
+
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="Câmera externa" />
+
+                <Spinner
+                    android:id="@+id/spinner_cameraexterna"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/opcoes_sim_nao"
+                    android:textAlignment="center"/>
+            </TableRow>
+
+            <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Limpeza do Veículo" />
+
+                    <Spinner
+                        android:id="@+id/spinner_limpezadoveiculo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="24dp"
+                        android:layout_weight="1"
+                        android:text="Embreagem" />
+
+                    <Spinner
+                        android:id="@+id/spinner_embreagem"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Motor" />
+
+                    <Spinner
+                        android:id="@+id/spinner_motor"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Freio" />
+
+                    <Spinner
+                        android:id="@+id/spinner_freio"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Nível óleo motor" />
+
+                    <Spinner
+                        android:id="@+id/spinner_nivel_oleo_motor"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Nível óleo freio" />
+
+                    <Spinner
+                        android:id="@+id/spinner_nivel_oleo_freio"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Pneus" />
+
+                    <Spinner
+                        android:id="@+id/pneus"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Estepe" />
+
+                    <Spinner
+                        android:id="@+id/estepe"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Pedais" />
+
+                    <Spinner
+                        android:id="@+id/pedais"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Chave de roda" />
+
+                    <Spinner
+                        android:id="@+id/chave_roda"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Escapamento" />
+
+                    <Spinner
+                        android:id="@+id/escapamento"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Freio de mão" />
+
+                    <Spinner
+                        android:id="@+id/freio_mao"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Macaco" />
+
+                    <Spinner
+                        android:id="@+id/macaco"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Faróis" />
+
+                    <Spinner
+                        android:id="@+id/farois"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Setas" />
+
+                    <Spinner
+                        android:id="@+id/setas"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Lanternas" />
+
+                    <Spinner
+                        android:id="@+id/lanternas"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Luz de freios" />
+
+                    <Spinner
+                        android:id="@+id/luz_freios"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Lâmpadas inter." />
+
+                    <Spinner
+                        android:id="@+id/lampadas_inter"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Luz de ré" />
+
+                    <Spinner
+                        android:id="@+id/luz_re"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Sinal sonoro de ré" />
+
+                    <Spinner
+                        android:id="@+id/sinal_sonoro_re"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Luz alta" />
+
+                    <Spinner
+                        android:id="@+id/luz_alta"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+                </TableRow>
+
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Luz baixa" />
+
+                    <Spinner
+                        android:id="@+id/luz_baixa"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Painel" />
+
+                    <Spinner
+                        android:id="@+id/painel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Portas e travas" />
+
+                    <Spinner
+                        android:id="@+id/portas_travas"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Buzina" />
+
+                    <Spinner
+                        android:id="@+id/buzina"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Cinto de segurança" />
+
+                    <Spinner
+                        android:id="@+id/cinto_seguranca"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Extintor de incêndio" />
+
+                    <Spinner
+                        android:id="@+id/extintor_incendio"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Triângulo sinalizador" />
+
+                    <Spinner
+                        android:id="@+id/triangulo_sinalizador"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Espelho retrovisor interno" />
+
+                    <Spinner
+                        android:id="@+id/retrovisor_interno"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Espelho retrovisor externo" />
+
+                    <Spinner
+                        android:id="@+id/retrovisor_externo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Para-choque" />
+
+                    <Spinner
+                        android:id="@+id/para_choque"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Limpador para-brisas" />
+
+                    <Spinner
+                        android:id="@+id/para_brisas"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Suspensão" />
+
+                    <Spinner
+                        android:id="@+id/suspensao"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Alinhamento/balanceamento" />
+
+                    <Spinner
+                        android:id="@+id/alinhamento_balanceamento"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Placa dianteira" />
+
+                    <Spinner
+                        android:id="@+id/placa_dianteira"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Placa traseira" />
+
+                    <Spinner
+                        android:id="@+id/placa_traseira"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                     />
+
+                    <Spinner
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Ar condicionado" />
+
+                    <Spinner
+                        android:id="@+id/arcondicionado"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Água arrefecimento" />
+
+                    <Spinner
+                        android:id="@+id/agua_arrefecimento"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Velocímetro" />
+
+                    <Spinner
+                        android:id="@+id/velocimetro"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Vidros" />
+
+                    <Spinner
+                        android:id="@+id/vidros"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Revisões" />
+
+                    <Spinner
+                        android:id="@+id/revisoes"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+            </TableLayout>
+
+        </ScrollView>
+
+    </TableLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_save"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="@dimen/side_margin_page"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="@dimen/side_margin_page"
+        android:background="@drawable/gradient_blue_color"
+        android:text="Salvar"
+        android:onClick="save"
+        android:textAllCaps="false"
+        android:textColor="@color/lightPaleGrey"
+        android:textSize="@dimen/text_size_h2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tablelayout1" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

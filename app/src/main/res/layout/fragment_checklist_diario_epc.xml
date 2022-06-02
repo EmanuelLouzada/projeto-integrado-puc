@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/top_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:id="@+id/txt_equipamento_seguranca"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="EQUIPAMENTOS DE SEGURANÇA"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_h2"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+
+
+
+    <TableLayout
+        android:id="@+id/tablelayout1"
+        android:layout_width="395dp"
+        android:layout_height="241dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="@dimen/margin_large2"
+        android:paddingLeft="@dimen/margin_large2"
+        android:stretchColumns="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_equipamento_seguranca">
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/lightBlue"
+                android:text="Itens"
+                android:textAlignment="center"
+                android:textColor="#FFF"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_marginRight="50dp"
+                android:layout_weight="1"
+                android:background="@color/lightBlue"
+                android:text="Equipamentos"
+                android:textAlignment="center"
+                android:textColor="#FFF"
+                android:textStyle="bold" />
+        </TableRow>
+
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:layout_marginRight="50dp"
+            android:background="@color/design_default_color_on_primary"
+            app:layout_constraintTop_toBottomOf="@+id/edt_km_atual">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="1">
+
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Escadas de fibra de vidro extensiva/singela" />
+
+                    <Spinner
+                        android:id="@+id/spinner_escadas_fibra_vidro"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Varas de manobra/ telescopia" />
+
+                    <Spinner
+                        android:id="@+id/spinner_varas_manobra_telecospia"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Bastões isolantes/Bastão de manobras" />
+
+                    <Spinner
+                        android:id="@+id/spinner_bastoes_isolantes"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Ferramenta de abertura em carga-loadbuster" />
+
+                    <Spinner
+                        android:id="@+id/spinner_ferramentas_abertura_carga"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Ferramentas manuais - boas condições" />
+
+                    <Spinner
+                        android:id="@+id/spinner_ferramentas_manuais"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Detector de tensão presença/ausência" />
+
+                    <Spinner
+                        android:id="@+id/spinner_detector_presenca_ausencia"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Alicate  Amperímetro" />
+
+                    <Spinner
+                        android:id="@+id/spinner_alicate_amperimetro"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Laudo dielétrico do Ferramental" />
+
+                    <Spinner
+                        android:id="@+id/spinner_laudo_dieletrico"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="IT´s/APR" />
+
+                    <Spinner
+                        android:id="@+id/spinner_its_apr"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Cordas / carretilha dupla ação" />
+
+                    <Spinner
+                        android:id="@+id/spinner_cordas_carretilha_dupla"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Cones e fitas de Sinalização" />
+
+                    <Spinner
+                        android:id="@+id/spinner_cones_fitas_sinalizacao"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Bandeirola de Sinalização" />
+
+                    <Spinner
+                        android:id="@+id/spinner_bandeirola_sinalizacao"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+            </TableLayout>
+
+        </ScrollView>
+
+    </TableLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_save"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="@dimen/side_margin_page"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="@dimen/side_margin_page"
+        android:background="@drawable/gradient_blue_color"
+        android:text="Salvar"
+        android:onClick="save"
+        android:textAllCaps="false"
+        android:textColor="@color/lightPaleGrey"
+        android:textSize="@dimen/text_size_h2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tablelayout1" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

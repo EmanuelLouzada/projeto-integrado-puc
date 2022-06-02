@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txt_analise_pessoal"
+            android:text="Análise Pessoal"
+            style="@style/form_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TableLayout
+            android:id="@+id/tablelayout1"
+            android:layout_width="match_parent"
+            android:layout_marginTop="40dp"
+            android:layout_height="200dp"
+            android:paddingLeft="@dimen/margin_large2"
+            android:stretchColumns="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_analise_pessoal">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/lightBlue"
+                    android:text="Análise"
+                    android:textAlignment="center"
+                    android:textColor="#FFF"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_marginRight="@dimen/margin_large3"
+                    android:layout_weight="1"
+                    android:background="@color/lightBlue"
+                    android:text="Sim/Não"
+                    android:textAlignment="center"
+                    android:textColor="#FFF"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+
+            <ScrollView
+                android:id="@+id/scrollView2"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_marginRight="@dimen/margin_large3"
+                android:background="@color/design_default_color_on_primary"
+                app:layout_constraintTop_toBottomOf="@+id/txt_lista_tarefas">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:stretchColumns="1">
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="Sinto-me bem para executar as tarefas" />
+
+                        <Spinner
+                            android:id="@+id/spinner_sinto_bem"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:entries="@array/opcoes_sim_nao"
+                            android:textAlignment="center" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="Conheço a atividade a ser executada" />
+
+
+                        <Spinner
+                            android:id="@+id/spinner_conheco_atividade"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:entries="@array/opcoes_sim_nao"
+                            android:textAlignment="center" />
+
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="As minhas ferramentas estão ok?" />
+
+                        <Spinner
+                            android:id="@+id/spinner_ferramentas_Ok"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:entries="@array/opcoes_sim_nao"
+                            android:textAlignment="center" />
+
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="As pessoas sabem onde estou?" />
+
+                        <Spinner
+                            android:id="@+id/spinner_onde_estou"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:entries="@array/opcoes_sim_nao"
+                            android:textAlignment="center" />
+
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="Existe rota de fuga?" />
+
+                        <Spinner
+                            android:id="@+id/spinner_rota_fuga"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:entries="@array/opcoes_sim_nao"
+                            android:textAlignment="center" />
+
+                    </TableRow>
+
+
+                </TableLayout>
+
+            </ScrollView>
+
+        </TableLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

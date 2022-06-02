@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/top_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/txt_equipamento_seguranca"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="EQUIPAMENTOS DE SEGURANÇA"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="@dimen/text_size_h2"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+
+
+    <TableLayout
+        android:id="@+id/tablelayout1"
+        android:layout_width="395dp"
+        android:layout_height="241dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="@dimen/margin_large2"
+        android:paddingLeft="@dimen/margin_large2"
+        android:stretchColumns="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_equipamento_seguranca">
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/lightBlue"
+                android:text="Itens"
+                android:textAlignment="center"
+                android:textColor="#FFF"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_marginRight="50dp"
+                android:layout_weight="1"
+                android:background="@color/lightBlue"
+                android:text="Equipamentos"
+                android:textAlignment="center"
+                android:textColor="#FFF"
+                android:textStyle="bold" />
+        </TableRow>
+
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:layout_marginRight="50dp"
+            android:background="@color/design_default_color_on_primary"
+            app:layout_constraintTop_toBottomOf="@+id/edt_km_atual">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="1">
+
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Bolsa para EPI" />
+
+                    <Spinner
+                        android:id="@+id/spinner_bolsa_epi"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Calçado de segunraça s/parte metálica" />
+
+                    <Spinner
+                        android:id="@+id/spinner_calcado_seg_s_parte_metalica"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Uniforme resistente a chama" />
+
+                    <Spinner
+                        android:id="@+id/spinner_uniforme_res_chama"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Protetor facial" />
+
+                    <Spinner
+                        android:id="@+id/spinner_protetor_facial"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawSelectorOnTop="true"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Capacete de segurança aba frontal" />
+
+                    <Spinner
+                        android:id="@+id/spinner_capacete_aba_frontal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Cinto de segurança tipo paraquedista" />
+
+                    <Spinner
+                        android:id="@+id/spinner_cinto_seg_paraquedista"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Crachá de identificação" />
+
+                    <Spinner
+                        android:id="@+id/spinner_cracha_identificaccao"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Laudos dos EPIs" />
+
+                    <Spinner
+                        android:id="@+id/spinner_laudos_epis"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Luva P.U" />
+
+                    <Spinner
+                        android:id="@+id/spinner_luvas_pu"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Luva de proteção (vaqueta)" />
+
+                    <Spinner
+                        android:id="@+id/spinner_luva_protecao_vaqueta"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Luvas isolantes classe 0" />
+
+                    <Spinner
+                        android:id="@+id/spinner_luvas_isolantes_classe0"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Luvas isolantes classe 2" />
+
+                    <Spinner
+                        android:id="@+id/spinner_luvas_isolantes_classe2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Manga isolante classe 2" />
+
+                    <Spinner
+                        android:id="@+id/spinner_manga_isolante_classe2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Óculos de segurança lentes incolor" />
+
+                    <Spinner
+                        android:id="@+id/spinner_oculos_seg_lentes_incolor"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Óculos de segurança lentes fumé" />
+
+                    <Spinner
+                        android:id="@+id/spinner_oculos_seg_lentes_fume"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="HAR Habilitação de acesso a rede" />
+
+                    <Spinner
+                        android:id="@+id/spinner_har"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Perneira tipo canavieiro" />
+
+                    <Spinner
+                        android:id="@+id/spinner_perneira_canavieiro"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:entries="@array/opcoes_sim_nao"
+                        android:textAlignment="center"/>
+
+                </TableRow>
+
+            </TableLayout>
+
+        </ScrollView>
+
+    </TableLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_save"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="@dimen/side_margin_page"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="@dimen/side_margin_page"
+        android:background="@drawable/gradient_blue_color"
+        android:text="Salvar"
+        android:onClick="save"
+        android:textAllCaps="false"
+        android:textColor="@color/lightPaleGrey"
+        android:textSize="@dimen/text_size_h2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tablelayout1" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

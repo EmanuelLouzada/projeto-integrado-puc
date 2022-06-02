@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/Louza_9guxrlo/Desktop/TRABALHO/Checklist/app/src/main/assets/database/DBCheckListPRO.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="0"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="125"/><column_width id="3" width="25223"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="10" parent="0"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,16:mainandroid_metadata"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="android_metadata" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="60"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">
+CREATE TABLE &quot;tb009_inspecao_epi&quot; (
+
+
+	&quot;id&quot;	INTEGER NOT NULL,
+	&quot;ts_cadastro&quot;	TEXT NOT NULL,
+	&quot;fk_id_usuario&quot;	INTEGER NOT NULL,
+	&quot;fk_id_funcionario&quot;	INTEGER NOT NULL,
+	&quot;fk_id_diretoria_atividade&quot;	INTEGER NOT NULL,
+	&quot;ts_sincronizacao&quot;	TEXT,
+	&quot;fk_id_servidor&quot;	INTEGER,
+	&quot;calcado_de_seguranca_s_parte_metalica&quot;	TEXT,
+	&quot;uniforme_resistente_a_chama&quot;	TEXT,
+	&quot;protetor_facial&quot;	TEXT,
+	&quot;capacete_de_seguranca_aba_frontal&quot;	TEXT,
+	&quot;cinto_seguranca_tipo_para_quedista&quot;	TEXT,
+	&quot;cracha_de_indentificacao&quot;	TEXT,
+	&quot;laudos_dos_epis&quot;	TEXT,
+	&quot;luva_pu&quot;	TEXT,
+	&quot;luva_de_protecao_vaqueta&quot;	TEXT,
+	&quot;luvas_isolantes_classe_0&quot;	TEXT,
+	&quot;luvas_isolantes_classe_2&quot;	TEXT,
+	&quot;manga_isolante_classe_2&quot;	TEXT,
+	&quot;oculos_de_seguranca_lentes_incolor&quot;	TEXT,
+	&quot;oculos_de_seguranca_lentes_fume&quot;	TEXT,
+	&quot;har_habilitacao_de_acesso_a_rede&quot;	TEXT,
+	&quot;perneira_tipo_canavieiro&quot;	TEXT,
+	PRIMARY KEY(&quot;id&quot; AUTOINCREMENT)
+)</sql><current_tab id="0"/></tab_sql></sqlb_project>

@@ -1,0 +1,26 @@
+<resources>
+    <!-- Common dimensions -->
+    <dimen name="margin_normal">8dp</dimen>
+
+    <dimen name="margin_large1">32dp</dimen>
+    <dimen name="margin_large2">24dp</dimen>
+    <dimen name="margin_large3">16dp</dimen>
+
+    <dimen name="form_titulo">16dp</dimen>
+    <dimen name="form_subtitulo">14dp</dimen>
+
+    <dimen name="side_margin_page">48dp</dimen>
+    <dimen name="page_margin_botton">64dp</dimen>
+
+    <dimen name="padding_large">16dp</dimen>
+
+    <dimen name="text_size_h2">20sp</dimen>
+    <dimen name="text_size_h3">18sp</dimen>
+    <dimen name="text_size_h5">14sp</dimen>
+    <dimen name="text_size_h6">12sp</dimen>
+    <!-- Icons -->
+    <dimen name="icon_padding">24dp</dimen>
+    <dimen name="row_layout_padding">10dp</dimen>
+
+
+</resources>

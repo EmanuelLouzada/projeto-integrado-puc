@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/txt_epi_convencionais"
+        android:text="Epis convencionais"
+        style="@style/form_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="0dp"
+        android:background="@color/design_default_color_on_primary"
+        android:paddingLeft="@dimen/margin_large3"
+        android:paddingRight="@dimen/margin_large3"
+        app:layout_constraintTop_toBottomOf="@+id/txt_epi_convencionais">
+
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:paddingRight="@dimen/margin_large3"
+            android:stretchColumns="1">
+
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Calçado de segurança" />
+
+                <CheckBox
+                    android:id="@+id/calcado_seguranca"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Capacete com jugular" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_capacete_jugular"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />/>
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Óculos de segurança" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_oculos_seguranca"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />/>
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Óculos ampla visão" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_oculos_ampla_visao"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />/>
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Protetor facial" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_protetor_facial"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />/>
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Protetor auditivo" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_protetor_auditivo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />/>
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Luvas de vaqueta" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_luva_vaqueta"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />/>
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Luva de raspa" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_luva_raspa"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />/>
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Luva de pvc" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_luva_pvc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />/>
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Respirador contra poeira" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_respirador_poeira"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />/>
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Máscara autônomo" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_mascara_autonoma"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />/>
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Macacão TNT" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_macacao_tnt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />/>
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Cinto de segurança com dois" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_cinto_seg_dois"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />/>
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Conjunto em hourion p/temp." />
+
+                <CheckBox
+                    android:id="@+id/checkBox_conj_hourion_temp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />/>
+
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Conjunto em texion G p/temp." />
+
+                <CheckBox
+                    android:id="@+id/checkBox_conj_texion_g_temp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />/>
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Conjunto em texion W p/ trab. frio" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_conj_texion_w_trab_frio"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />/>
+
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Avental de couro" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_avental_couro"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />/>
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Perneira" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_perneira"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />/>
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Mangote de couro" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_mangote_couro"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />/>
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Balaclava" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_balaclava"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />/>
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Outros" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_outros"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />/>
+
+
+            </TableRow>
+
+        </TableLayout>
+
+    </ScrollView>
+
+
+
+        <TextView
+            android:id="@+id/txt_epi_especificos"
+            android:text="Epis específicos"
+            style="@style/form_title"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="250dp"
+        android:background="@color/design_default_color_on_primary"
+        android:paddingLeft="@dimen/margin_large3"
+        android:paddingRight="@dimen/margin_large3"
+        app:layout_constraintTop_toBottomOf="@+id/txt_epi_especificos">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:paddingRight="@dimen/margin_large3"
+            android:stretchColumns="1">
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="409dp"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Detector de tensão" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_detector_tensao"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Capuz Classe 4" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_capuz_classe_4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Bastão isolante" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_bastao_isolante"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Cadeado de segurança" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_cadeado_seguranca"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Etiqueta de bloqueio" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_etiqueta_bloqueio"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Aterramento temporário" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_aterramento_temporario"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Ferramentas isoladas para 1000v" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_ferramentas_isoladas_1000v"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Roupa p/ proteção arco elétrico-classe 2" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_roupa_protecao_arco_eletrico_classe2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Roupa p/ proteção arco elétrico-classe 4" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_roupa_protecao_arco_eletrico_classe4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="luva para 300 kv" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_luvas_300kv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="luva acima de 13,8 kv" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_luva_acima_13_8kv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="luva para 1000kv" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_luva_1000kv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Balaclava" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_balaclava_epi_especifico"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_weight="1"
+                    android:text="Outros" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_outros_epi_especifico"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_weight="1" />
+
+            </TableRow>
+        </TableLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+

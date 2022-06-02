@@ -1,0 +1,2279 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txt_risco_seguranca_meio_ambiente"
+            android:text="Risco de segurança saúde e meio ambiente"
+            style="@style/form_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/txt_risco_queda_pessoal"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:text="QUEDAS-PESSOAIS"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_h5"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/txt_risco_seguranca_meio_ambiente"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txt_risco_queda_pessoal_detalhe"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:text="(Altura,piso escorregadio, rompimento de apoio, mal súbito, falta de sustentação)"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_h6"
+            app:layout_constraintLeft_toRightOf="@+id/txt_risco_queda_pessoal"
+            app:layout_constraintTop_toBottomOf="@+id/txt_risco_seguranca_meio_ambiente" />
+
+        <Spinner
+            android:id="@+id/spinner_risco_queda_pessoal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:entries="@array/opcoes_sim_nao"
+            app:layout_constraintTop_toBottomOf="@+id/txt_risco_queda_pessoal"
+            tools:ignore="MissingConstraints" />
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="24dp"
+            android:stretchColumns="1"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_risco_queda_pessoal">
+
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/lightBlue"
+                    android:text="MINHA PREVENÇÃO SERÁ"
+                    android:textAlignment="center"
+                    android:textColor="#FFF"
+                    android:textSize="@dimen/text_size_h5"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_utilizar_cinto_seguranca"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="UTILIZAR CINTO DE SEGURANÇA"
+                    android:textSize="@dimen/text_size_h6" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_utilizar_cabo_guia"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="UTILIZAR CABO GUIA"
+                    android:textSize="@dimen/text_size_h6" />
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_utilizar_corrimao"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="UTILIZAR CORRIMÃO"
+                    android:textSize="@dimen/text_size_h6" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_utilizar_trava_quedas"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="UTILIZAR TRAVA-QUEDAS"
+                    android:textSize="@dimen/text_size_h6" />
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_qp_outros"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="OUTROS"
+                    android:textSize="@dimen/text_size_h6" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_corrigir_local_escorregadio"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="CORRIGIR LOCAL ESCORREGADIO"
+                    android:textSize="@dimen/text_size_h6" />
+            </TableRow>
+
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/txt_queda_materiais"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:text="QUEDAS-MATERIAIS"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_h5"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txt_risco_queda_material_detalhe"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:text="(Altura,piso escorregadio, rompimento de apoio, mal súbito, falta de sustentação)"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_h6"
+            app:layout_constraintLeft_toRightOf="@+id/txt_queda_materiais"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
+        <Spinner
+            android:id="@+id/spinner_risco_queda_material"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:entries="@array/opcoes_sim_nao"
+            app:layout_constraintTop_toBottomOf="@+id/txt_risco_queda_material_detalhe"
+            tools:ignore="MissingConstraints" />
+
+
+        <TableLayout
+            android:id="@+id/tableLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="24dp"
+            android:stretchColumns="1"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_risco_queda_material">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/lightBlue"
+                    android:text="MINHA PREVENÇÃO SERÁ"
+                    android:textAlignment="center"
+                    android:textColor="#FFF"
+                    android:textSize="@dimen/text_size_h5"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_definir_zona_controlada_seguranca"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="DEFINIR A ZONA CONTROLADA E SEGURANÇA"
+                    android:textSize="@dimen/text_size_h6" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_isolar_area"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="ISOLAR ÁREA"
+                    android:textSize="@dimen/text_size_h6" />
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_amarrar_material"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="AMARRAR MATERIAL"
+                    android:textSize="@dimen/text_size_h6" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_outros_qd_material"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="OUTROS"
+                    android:textSize="@dimen/text_size_h6" />
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_elaborar_apt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="ELABORAR APT"
+                    android:textSize="@dimen/text_size_h6" />
+            </TableRow>
+
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/txt_projecao_material_vibracao"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:text="PROJEÇÃO DE MATERIAL/VIBRAÇÃO"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_h5"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout2"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txt_risco_projecao_material_vibracao_detalhes"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:text="(Detonação, martelar, rompimento de freio, esmeril, resíduo...)"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_h6"
+            app:layout_constraintLeft_toRightOf="@+id/txt_projecao_material_vibracao"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout2" />
+
+        <Spinner
+            android:id="@+id/spinner_risco_projecao_material_vibracao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:entries="@array/opcoes_sim_nao"
+            app:layout_constraintTop_toBottomOf="@+id/txt_projecao_material_vibracao"
+            tools:ignore="MissingConstraints" />
+
+
+        <TableLayout
+            android:id="@+id/tableLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="24dp"
+            android:stretchColumns="1"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_risco_projecao_material_vibracao">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/lightBlue"
+                    android:text="MINHA PREVENÇÃO SERÁ"
+                    android:textAlignment="center"
+                    android:textColor="#FFF"
+                    android:textSize="@dimen/text_size_h5"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_oculos_de_seguranca"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="ÓCULOS DE SEGURANÇA"
+                    android:textSize="@dimen/text_size_h6" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_protetor_facial"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="PROTETOR FACIAL"
+                    android:textSize="@dimen/text_size_h6" />
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_isolar_area_projecao"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="ISOLAR ÁREA"
+                    android:textSize="@dimen/text_size_h6" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_outros_projecao"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="OUTROS"
+                    android:textSize="@dimen/text_size_h6" />
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/txt_alta_pressao"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:text="ALTA-PRESSÃO"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_h5"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout3"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txt_alta_pressao_detalhes"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:text="(Hidráulica,pneumática)"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_h6"
+            app:layout_constraintLeft_toRightOf="@+id/txt_alta_pressao"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout3" />
+
+        <Spinner
+            android:id="@+id/spinner_risco_alta_pressao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:entries="@array/opcoes_sim_nao"
+            app:layout_constraintTop_toBottomOf="@+id/txt_alta_pressao"
+            tools:ignore="MissingConstraints" />
+
+        <TableLayout
+            android:id="@+id/tableLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="24dp"
+            android:stretchColumns="1"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_risco_alta_pressao">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/lightBlue"
+                    android:text="MINHA PREVENÇÃO SERÁ"
+                    android:textAlignment="center"
+                    android:textColor="#FFF"
+                    android:textSize="@dimen/text_size_h5"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_bloqueio_pneumatico"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="BLOQUEIO PNEUMÁTICO"
+                    android:textSize="@dimen/text_size_h6" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_bloqueio_hidraulico"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="BLOQUEIO HIDRÁULICO"
+                    android:textSize="@dimen/text_size_h6" />
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_utilizar_EPI_especial"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="UTILIZAR EPI ESPECIAL"
+                    android:textSize="@dimen/text_size_h6" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_outros_alta_pressao"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="OUTROS"
+                    android:textSize="@dimen/text_size_h6" />
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/txt_colisao"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:text="COLISÃO"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_h5"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout4"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txt_risco_colisao_detalhes"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:text="(Transporte cartas e pessoais)"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_h6"
+            app:layout_constraintLeft_toRightOf="@+id/txt_colisao"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout4" />
+
+        <Spinner
+            android:id="@+id/spinner_risco_colisao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:entries="@array/opcoes_sim_nao"
+            app:layout_constraintTop_toBottomOf="@+id/txt_risco_colisao_detalhes"
+            tools:ignore="MissingConstraints" />
+
+
+        <TableLayout
+            android:id="@+id/tableLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="24dp"
+            android:stretchColumns="1"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_risco_colisao">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/lightBlue"
+                    android:text="MINHA PREVENÇÃO SERÁ"
+                    android:textAlignment="center"
+                    android:textColor="#FFF"
+                    android:textSize="@dimen/text_size_h5"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_sinalizar_area"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="SINALIZAR ÁREA"
+                    android:textSize="@dimen/text_size_h6" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_checklist_veiculo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="CHECKLIST DO VEÍCULO"
+                    android:textSize="@dimen/text_size_h6" />
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_aut_dirigir_equipamento"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="AUT. P/DIRIGIR EQUIPAMENTO"
+                    android:textSize="@dimen/text_size_h6" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_motorizado"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="MOTORIZADO"
+                    android:textSize="@dimen/text_size_h6" />
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/txt_choque_contra"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:text="Choque Contra"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_h5"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout5"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txt_choque_contra_detalhes"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:text="(Partes móveis expostos, choque mecânico, içamentos)"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_h6"
+            app:layout_constraintLeft_toRightOf="@+id/txt_choque_contra"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout5" />
+
+        <Spinner
+            android:id="@+id/spinner_risco_choque_contra"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:entries="@array/opcoes_sim_nao"
+            app:layout_constraintTop_toBottomOf="@+id/txt_choque_contra_detalhes"
+            tools:ignore="MissingConstraints" />
+
+
+        <TableLayout
+            android:id="@+id/tableLayout6"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="24dp"
+            android:stretchColumns="1"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_risco_choque_contra">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/lightBlue"
+                    android:text="MINHA PREVENÇÃO SERÁ"
+                    android:textAlignment="center"
+                    android:textColor="#FFF"
+                    android:textSize="@dimen/text_size_h5"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_protecao_partes_moveis"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="PROTEÇÃO PARA PARTES MÓVEIS"
+                    android:textSize="@dimen/text_size_h6" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_bloqueio_equipamentos_auxiliares"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="BLOQUEIO DE EQUIPAMENTOS AUXILIARES"
+                    android:textSize="@dimen/text_size_h6" />
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_bloqueio_mecanico"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="BLOQUEIO MECÂNICO"
+                    android:textSize="@dimen/text_size_h6" />
+
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/txt_ergonomia"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:text="ERGONOMIA"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_h5"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout6"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txt_ergonomia_detalhes"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:text="(Portura inadequada, esforço físico repetitivo)"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_h6"
+            app:layout_constraintLeft_toRightOf="@+id/txt_ergonomia"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout6" />
+
+        <Spinner
+            android:id="@+id/spinner_risco_ergonomia"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:entries="@array/opcoes_sim_nao"
+            app:layout_constraintTop_toBottomOf="@+id/txt_ergonomia_detalhes"
+            tools:ignore="MissingConstraints" />
+
+
+        <TableLayout
+            android:id="@+id/tableLayout7"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="24dp"
+            android:stretchColumns="1"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_risco_ergonomia">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/lightBlue"
+                    android:text="MINHA PREVENÇÃO SERÁ"
+                    android:textAlignment="center"
+                    android:textColor="#FFF"
+                    android:textSize="@dimen/text_size_h5"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_alongamento_ginastica_laboral"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="ALONGAMENTO, GINÁSTICA LABORAL"
+                    android:textSize="@dimen/text_size_h6" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_ergonomia"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="ERGONOMIA"
+                    android:textSize="@dimen/text_size_h6" />
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_outros_ergonomia"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="OUTROS"
+                    android:textSize="@dimen/text_size_h6" />
+
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/txt_fadiga"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:text="FADIGA"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_h5"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout7"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txt_fadiga_detalhes"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:text="(Excesso de hrs extras, esforço físico repetivivo...)"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_h6"
+            app:layout_constraintLeft_toRightOf="@+id/txt_fadiga"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout7" />
+
+        <Spinner
+            android:id="@+id/spinner_risco_fadiga"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:entries="@array/opcoes_sim_nao"
+            app:layout_constraintTop_toBottomOf="@+id/txt_fadiga_detalhes"
+            tools:ignore="MissingConstraints" />
+
+
+        <TableLayout
+            android:id="@+id/tableLayout8"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="24dp"
+            android:stretchColumns="1"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_risco_fadiga">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/lightBlue"
+                    android:text="MINHA PREVENÇÃO SERÁ"
+                    android:textAlignment="center"
+                    android:textColor="#FFF"
+                    android:textSize="@dimen/text_size_h5"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_revazemento"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="REVEZAMENTO"
+                    android:textSize="@dimen/text_size_h6" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_pausa_descanso"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="PAUSA PARA DESCANSO"
+                    android:textSize="@dimen/text_size_h6" />
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_outros_fadiga"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="OUTROS"
+                    android:textSize="@dimen/text_size_h6" />
+
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/txt_ataque_animais"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:text="ATAQUE DE ANIMAIS"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_h5"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout8"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txt_ataque_animais_detalhes"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:text="(Cobras, aranhas ...)"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_h6"
+            app:layout_constraintLeft_toRightOf="@+id/txt_ataque_animais"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout8" />
+
+
+        <Spinner
+            android:id="@+id/spinner_risco_ataque_animais"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_weight="1"
+            android:entries="@array/opcoes_sim_nao"
+            app:layout_constraintTop_toBottomOf="@+id/txt_ataque_animais_detalhes"
+            tools:ignore="MissingConstraints" />
+
+        <TableLayout
+            android:id="@+id/tableLayout9"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="24dp"
+            android:stretchColumns="1"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_risco_ataque_animais">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/lightBlue"
+                    android:text="MINHA PREVENÇÃO SERÁ"
+                    android:textAlignment="center"
+                    android:textColor="#FFF"
+                    android:textSize="@dimen/text_size_h5"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_inspecionar_area"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="INSPECIONAR A ÁREA"
+                    android:textSize="@dimen/text_size_h6" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_providenciar_medidas_acoes_adequadas"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="PROVIDENCIAR MEDIDAS/AÇÕES ADEQUADAS"
+                    android:textSize="@dimen/text_size_h6" />
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_outros_ataque_animais"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="OUTROS"
+                    android:textSize="@dimen/text_size_h6" />
+
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/txt_iluminacao_deficiente_excesso"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:text="ILUMINAÇÃO DEFICIENTE OU EXCESSO"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_h5"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout9"
+            tools:ignore="MissingConstraints" />
+
+        <Spinner
+            android:id="@+id/spinner_risco_iluminacao_deficiente_excesso"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:entries="@array/opcoes_sim_nao"
+            app:layout_constraintTop_toBottomOf="@+id/txt_iluminacao_deficiente_excesso"
+            tools:ignore="MissingConstraints" />
+
+
+        <TableLayout
+            android:id="@+id/tableLayout10"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="24dp"
+            android:stretchColumns="1"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_risco_iluminacao_deficiente_excesso">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/lightBlue"
+                    android:text="MINHA PREVENÇÃO SERÁ"
+                    android:textAlignment="center"
+                    android:textColor="#FFF"
+                    android:textSize="@dimen/text_size_h5"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_instalar_iluminacao_adequada"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="INSTALAR ILUMINAÇÃO ADEQUADA"
+                    android:textSize="@dimen/text_size_h6" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_solicitar_subs_lampadas_queimadas"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="SOLICITAR SUBSTTUIÇÃO DE LÂMPADAS QUEIMADAS"
+                    android:textSize="@dimen/text_size_h6" />
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_outros_iluminacao_deficiente_excesso"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="OUTROS"
+                    android:textSize="@dimen/text_size_h6" />
+
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/txt_poeira"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:text="POEIRA"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_h5"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout10"
+            tools:ignore="MissingConstraints" />
+
+        <Spinner
+            android:id="@+id/spinner_poeira"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:entries="@array/opcoes_sim_nao"
+            app:layout_constraintTop_toBottomOf="@+id/txt_poeira"
+            tools:ignore="MissingConstraints" />
+
+
+        <TableLayout
+            android:id="@+id/tableLayout11"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="24dp"
+            android:stretchColumns="1"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_poeira">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/lightBlue"
+                    android:text="MINHA PREVENÇÃO SERÁ"
+                    android:textAlignment="center"
+                    android:textColor="#FFF"
+                    android:textSize="@dimen/text_size_h5"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_utilizar_respirador_contra_poeira"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="UTILIZAR RESPIRADOR CONTRA POEIRA"
+                    android:textSize="@dimen/text_size_h6" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_utilizar_oculos_ampla_visao"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="UTILIZAR ÓCULOS AMPLA VISÃO"
+                    android:textSize="@dimen/text_size_h6" />
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_outros_poeira"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="OUTROS"
+                    android:textSize="@dimen/text_size_h6" />
+
+            </TableRow>
+        </TableLayout>
+
+
+        <TextView
+            android:id="@+id/txt_insolacao"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:text="INSOLAÇÃO"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_h5"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout11"
+            tools:ignore="MissingConstraints" />
+
+        <Spinner
+            android:id="@+id/spinner_insolacao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:entries="@array/opcoes_sim_nao"
+            app:layout_constraintTop_toBottomOf="@+id/txt_insolacao"
+            tools:ignore="MissingConstraints" />
+
+
+        <TableLayout
+            android:id="@+id/tableLayout12"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="24dp"
+            android:stretchColumns="1"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_insolacao">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/lightBlue"
+                    android:text="MINHA PREVENÇÃO SERÁ"
+                    android:textAlignment="center"
+                    android:textColor="#FFF"
+                    android:textSize="@dimen/text_size_h5"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_utilizar_vestimenta_manga_longa"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="UTLIZAR VESTIMENTA DE MANGA LONGA"
+                    android:textSize="@dimen/text_size_h6" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_utilizar_protetor_solar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="UTILIZAR PROTETOR SOLAR"
+                    android:textSize="@dimen/text_size_h6" />
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_outros_insolacao"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="OUTROS"
+                    android:textSize="@dimen/text_size_h6" />
+
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/txt_desabamento_soterramento"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:text="DESABAMENTO/SOTERRAMENTO"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_h5"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout12"
+            tools:ignore="MissingConstraints" />
+
+        <Spinner
+            android:id="@+id/spinner_desabamento_soterramento"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:entries="@array/opcoes_sim_nao"
+            app:layout_constraintTop_toBottomOf="@+id/txt_desabamento_soterramento"
+            tools:ignore="MissingConstraints" />
+
+
+        <TableLayout
+            android:id="@+id/tableLayout13"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="24dp"
+            android:stretchColumns="1"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_desabamento_soterramento">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/lightBlue"
+                    android:text="MINHA PREVENÇÃO SERÁ"
+                    android:textAlignment="center"
+                    android:textColor="#FFF"
+                    android:textSize="@dimen/text_size_h5"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_fazer_escoramento"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="FAZER ESCORAMENTO"
+                    android:textSize="@dimen/text_size_h6" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_elaborar_apt_escavacao"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="ELABORAR APT-ESCAVAÇÃO"
+                    android:textSize="@dimen/text_size_h6" />
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_outros_desabamento_soterramento"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="OUTROS"
+                    android:textSize="@dimen/text_size_h6" />
+
+            </TableRow>
+        </TableLayout>
+
+
+        <TextView
+            android:id="@+id/txt_gases_fumos"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:text="GASES E FUMOS"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_h5"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout13"
+            tools:ignore="MissingConstraints" />
+
+        <Spinner
+            android:id="@+id/spinner_gases_fumos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:entries="@array/opcoes_sim_nao"
+            app:layout_constraintTop_toBottomOf="@+id/txt_gases_fumos"
+            tools:ignore="MissingConstraints" />
+
+
+        <TableLayout
+            android:id="@+id/tableLayout14"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="24dp"
+            android:stretchColumns="1"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_gases_fumos">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/lightBlue"
+                    android:text="MINHA PREVENÇÃO SERÁ"
+                    android:textAlignment="center"
+                    android:textColor="#FFF"
+                    android:textSize="@dimen/text_size_h5"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_utilizar_mascara_PFF2__soldadores"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="UTILIZAR MÁSCARA PFF2 PARA SOLDADORES"
+                    android:textSize="@dimen/text_size_h6" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_utilizar_mascara_filtro_gases"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="UTILIZAR MÁSCARA COM FILTRO PARA GASES"
+                    android:textSize="@dimen/text_size_h6" />
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_utlilizar_sistema_exaustao"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="UTILIZAR SISTEMA DE EXAUSTÃO"
+                    android:textSize="@dimen/text_size_h6" />
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_outros_gases_fumos"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="OUTROS"
+                    android:textSize="@dimen/text_size_h6" />
+
+            </TableRow>
+        </TableLayout>
+
+
+        <TextView
+            android:id="@+id/txt_ruidos"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:text="RUÍDOS"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_h5"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout14"
+            tools:ignore="MissingConstraints" />
+
+        <Spinner
+            android:id="@+id/spinner_ruidos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:entries="@array/opcoes_sim_nao"
+            app:layout_constraintTop_toBottomOf="@+id/txt_ruidos"
+            tools:ignore="MissingConstraints" />
+
+
+        <TableLayout
+            android:id="@+id/tableLayout15"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="24dp"
+            android:stretchColumns="1"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_ruidos">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/lightBlue"
+                    android:text="MINHA PREVENÇÃO SERÁ"
+                    android:textAlignment="center"
+                    android:textColor="#FFF"
+                    android:textSize="@dimen/text_size_h5"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <CheckBox
+                android:id="@+id/checkBox_utilizar_protetor_auditivo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="UTILIZAR PROTETOR AUDITIVO"
+                android:textSize="@dimen/text_size_h6" />
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_outros_ruidos"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="OUTROS"
+                    android:textSize="@dimen/text_size_h6" />
+
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/txt_substancias_toxicas"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:text="SUBSTÂNCIAS TÓXICAS"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_h5"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout15"
+            tools:ignore="MissingConstraints" />
+
+
+        <TextView
+            android:id="@+id/txt_substancias_toxicas_detalhes"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:text="(produtos e reíduos químicos - ex: óleos e graxas,SPL... Agentes biológicos (vírus, bactérias e fungos)"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_h6"
+            app:layout_constraintLeft_toRightOf="@+id/txt_substancias_toxicas"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout15" />
+
+        <Spinner
+            android:id="@+id/spinner_substancias_toxicas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:entries="@array/opcoes_sim_nao"
+            app:layout_constraintTop_toBottomOf="@+id/txt_substancias_toxicas_detalhes"
+            tools:ignore="MissingConstraints" />
+
+
+        <TableLayout
+            android:id="@+id/tableLayout16"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="24dp"
+            android:stretchColumns="1"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_substancias_toxicas">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/lightBlue"
+                    android:text="MINHA PREVENÇÃO SERÁ"
+                    android:textAlignment="center"
+                    android:textColor="#FFF"
+                    android:textSize="@dimen/text_size_h5"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <CheckBox
+                android:id="@+id/checkBox_utilizar_resp_filtro_produtos_quimicos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="UTILIZAR RESP. C/FILTRO P/ PRODUTOS QUÍMICOS"
+                android:textSize="@dimen/text_size_h6" />
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_utilizar_oculos_ampla_visao_subs_toxicas"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="UTILIZAR ÓCULOS DE AMPLA VISÃO"
+                    android:textSize="@dimen/text_size_h6" />
+
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_higienizacao_desinfeccao"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="HIGIENIZAÇÃO/DESINFECÇÃO"
+                    android:textSize="@dimen/text_size_h6" />
+
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_utilizar_creme_protecao"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="UTILIZAR CREME DE PROTEÇÃO"
+                    android:textSize="@dimen/text_size_h6" />
+
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_utilizar_macacao_tnt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="UTILIZAR MACACÃO EM TNT"
+                    android:textSize="@dimen/text_size_h6" />
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_utilizar_luvas"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="UTILIZAR LUVAS"
+                    android:textSize="@dimen/text_size_h6" />
+            </TableRow>
+
+        </TableLayout>
+
+
+        <TextView
+            android:id="@+id/txt_incendio_explosao"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:text="INCÊNDIO/EXPLOSÃO"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_h5"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout16"
+            tools:ignore="MissingConstraints" />
+
+
+        <Spinner
+            android:id="@+id/spinner_incendio_explosao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:entries="@array/opcoes_sim_nao"
+            app:layout_constraintTop_toBottomOf="@+id/txt_incendio_explosao"
+            tools:ignore="MissingConstraints" />
+
+
+        <TableLayout
+            android:id="@+id/tableLayout17"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="24dp"
+            android:stretchColumns="1"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_incendio_explosao">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/lightBlue"
+                    android:text="MINHA PREVENÇÃO SERÁ"
+                    android:textAlignment="center"
+                    android:textColor="#FFF"
+                    android:textSize="@dimen/text_size_h5"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <CheckBox
+                android:id="@+id/checkBox_proteger_material_combustivel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="PROTEGER MATERIAL COMBUSTÍVEL"
+                android:textSize="@dimen/text_size_h6" />
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_rota_evacuacao"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="ROTA DE EVACUAÇÃO"
+                    android:textSize="@dimen/text_size_h6" />
+
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_existe_extintor_adequado"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="EXISTE EXTINTOR ADEQUADO?"
+                    android:textSize="@dimen/text_size_h6" />
+
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_inst_extintor_adequado"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="INST. EXTINTOR ADEQUADO"
+                    android:textSize="@dimen/text_size_h6" />
+
+
+            </TableRow>
+
+        </TableLayout>
+
+
+        <TextView
+            android:id="@+id/txt_asfixia"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:text="ASFIXIA"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_h5"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout17"
+            tools:ignore="MissingConstraints" />
+
+
+        <TextView
+            android:id="@+id/txt_asfixia_detalhes"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:text="(manuseio de peças, içamento das alturas)"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_h6"
+            app:layout_constraintLeft_toRightOf="@+id/txt_asfixia"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout16" />
+
+        <Spinner
+            android:id="@+id/spinner_asfixia"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:entries="@array/opcoes_sim_nao"
+            app:layout_constraintTop_toBottomOf="@+id/txt_asfixia_detalhes"
+            tools:ignore="MissingConstraints" />
+
+
+        <TableLayout
+            android:id="@+id/tableLayout18"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="24dp"
+            android:stretchColumns="1"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_asfixia">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/lightBlue"
+                    android:text="MINHA PREVENÇÃO SERÁ"
+                    android:textAlignment="center"
+                    android:textColor="#FFF"
+                    android:textSize="@dimen/text_size_h5"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <CheckBox
+                android:id="@+id/checkBox_instalar_ventilacao_exaustao"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="INSTALAR VENTILACAO/EXAUSTAO"
+                android:textSize="@dimen/text_size_h6" />
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_utilizar_mascara_autonoma"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="UTILIZAR MÁSCARA AUTONOMA"
+                    android:textSize="@dimen/text_size_h6" />
+
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_medicao_nivel_oxigenio"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="MEDIÇÃO DE NÍVEL DE OXIGÊNIO"
+                    android:textSize="@dimen/text_size_h6" />
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_outros_asfixia"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="OUTROS"
+                    android:textSize="@dimen/text_size_h6" />
+
+
+            </TableRow>
+
+        </TableLayout>
+
+
+        <TextView
+            android:id="@+id/txt_agarramento_prensamento_membros"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:text="AGARRAMENTO/PRESAMENTO DE MEMBROS"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_h5"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout18"
+            tools:ignore="MissingConstraints" />
+
+
+        <Spinner
+            android:id="@+id/spinner_agarramento_prensamento_membros"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:entries="@array/opcoes_sim_nao"
+            app:layout_constraintTop_toBottomOf="@+id/txt_agarramento_prensamento_membros"
+            tools:ignore="MissingConstraints" />
+
+
+        <TableLayout
+            android:id="@+id/tableLayout19"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="24dp"
+            android:stretchColumns="1"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_agarramento_prensamento_membros">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/lightBlue"
+                    android:text="MINHA PREVENÇÃO SERÁ"
+                    android:textAlignment="center"
+                    android:textColor="#FFF"
+                    android:textSize="@dimen/text_size_h5"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <CheckBox
+                android:id="@+id/checkBox_barreiras_protecao"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="BARREIRAS DE PROTEÇÃO"
+                android:textSize="@dimen/text_size_h6" />
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_manter_distancia_segura"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="MANTER DISTÂNCIA SEGURA"
+                    android:textSize="@dimen/text_size_h6" />
+
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_epis_adequados"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="EPIS ADEQUADOS"
+                    android:textSize="@dimen/text_size_h6" />
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_outros_agarramento_prensamento"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="OUTROS"
+                    android:textSize="@dimen/text_size_h6" />
+
+
+            </TableRow>
+
+        </TableLayout>
+
+
+        <TextView
+            android:id="@+id/txt_queimadura_quente"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:text="QUEIMADURA A QUENTE"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_h5"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout19"
+            tools:ignore="MissingConstraints" />
+
+
+        <TextView
+            android:id="@+id/txt_queimadura_quente_detalhes"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:text="(contato/atingido por materiais quentes e/ou irradiação)"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_h6"
+            app:layout_constraintLeft_toRightOf="@+id/txt_queimadura_quente"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout19" />
+
+        <Spinner
+            android:id="@+id/spinner_quimadura_quente"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:entries="@array/opcoes_sim_nao"
+            app:layout_constraintTop_toBottomOf="@+id/txt_queimadura_quente_detalhes"
+            tools:ignore="MissingConstraints" />
+
+
+        <TableLayout
+            android:id="@+id/tableLayout20"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="24dp"
+            android:stretchColumns="1"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_quimadura_quente">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/lightBlue"
+                    android:text="MINHA PREVENÇÃO SERÁ"
+                    android:textAlignment="center"
+                    android:textColor="#FFF"
+                    android:textSize="@dimen/text_size_h5"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <CheckBox
+                android:id="@+id/checkBox_utlizar_EPI_proprio_calor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="UTLIZAR EPI PRÓPRIO PARA CALOR"
+                android:textSize="@dimen/text_size_h6" />
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_solicitar_medicao_calor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="SOLICITAR MEDIÇÃO DE CALOR"
+                    android:textSize="@dimen/text_size_h6" />
+
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_elaborar_apt_trabalho_quente"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="ELABORAR APT- TRABALHO A QUENTE"
+                    android:textSize="@dimen/text_size_h6" />
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_aguardar_resfriamento"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="AGUARDAR RESFRIAMENTO"
+                    android:textSize="@dimen/text_size_h6" />
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_utilizar_avental_couro"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="UTILIZAR AVENTAL DE COURO"
+                    android:textSize="@dimen/text_size_h6" />
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_utilizar_perneira_couro"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="UTILIZAR PERNEIRA DE COURO"
+                    android:textSize="@dimen/text_size_h6" />
+
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/txt_vazamentos_derramamentos"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:text="VAZAMENTOS/DERRAMAMENTOS"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_h5"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout20"
+            tools:ignore="MissingConstraints" />
+
+
+        <TextView
+            android:id="@+id/txt_vazamentos_derramamentos_detalhes"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:text="()"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_h6"
+            app:layout_constraintLeft_toRightOf="@+id/txt_vazamentos_derramamentos"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout20" />
+
+        <Spinner
+            android:id="@+id/spinner_vazamentos_derramamentos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:entries="@array/opcoes_sim_nao"
+            app:layout_constraintTop_toBottomOf="@+id/txt_vazamentos_derramamentos_detalhes"
+            tools:ignore="MissingConstraints" />
+
+
+        <TableLayout
+            android:id="@+id/tableLayout21"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="24dp"
+            android:stretchColumns="1"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_vazamentos_derramamentos">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/lightBlue"
+                    android:text="MINHA PREVENÇÃO SERÁ"
+                    android:textAlignment="center"
+                    android:textColor="#FFF"
+                    android:textSize="@dimen/text_size_h5"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <CheckBox
+                android:id="@+id/checkBox_providenciar_barreiras_contencao"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="PROVIDENCIAR BARREIRAS DE CONTENÇÃO"
+                android:textSize="@dimen/text_size_h6" />
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_providenciar_po_serragem"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="PROVIDENCIAR PÓ DE SERRAGEM"
+                    android:textSize="@dimen/text_size_h6" />
+
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_solicitar_apoio_brigada"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="SOLICITAR APOIO DA BRIGADA"
+                    android:textSize="@dimen/text_size_h6" />
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_outros_vazamentos_derramamentos"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="OUTROS"
+                    android:textSize="@dimen/text_size_h6" />
+
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/txt_choque_eletrico"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:text="CHOQUE ELÉTRICO"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_h5"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout21"
+            tools:ignore="MissingConstraints" />
+
+
+        <Spinner
+            android:id="@+id/spinner_choque_eletrico"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:entries="@array/opcoes_sim_nao"
+            app:layout_constraintTop_toBottomOf="@+id/txt_choque_eletrico"
+            tools:ignore="MissingConstraints" />
+
+
+        <TableLayout
+            android:id="@+id/tableLayout22"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginTop="24dp"
+            android:stretchColumns="1"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_choque_eletrico">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/lightBlue"
+                    android:text="MINHA PREVENÇÃO SERÁ"
+                    android:textAlignment="center"
+                    android:textColor="#FFF"
+                    android:textSize="@dimen/text_size_h5"
+                    android:textStyle="bold" />
+
+            </TableRow>
+
+            <CheckBox
+                android:id="@+id/checkBox_desenergizar_bloqueio_eletrico"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="DESENERGIZAR/BLOQUEIO ELÉTRICO"
+                android:textSize="@dimen/text_size_h6" />
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_utilizar_EPIS_especificos_NR10"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="UTLIZAR EPIS ESPECÍFICOS - NR-10"
+                    android:textSize="@dimen/text_size_h6" />
+
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_diagrama_unifilar_operacao_atualizado"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="DIAGRAMA UNIFILAR DE OPERAÇAO ATUALIZADO"
+                    android:textSize="@dimen/text_size_h6" />
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_instrucoes_operacoes_atualizadas"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="INSTRUÇÕES DE OPERAÇÕES ATUALIZADAS"
+                    android:textSize="@dimen/text_size_h6" />
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_squencimetro_adequado"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="SEQUÊNCÍMETRO ADEQUADO"
+                    android:textSize="@dimen/text_size_h6" />
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_definicoes_zonas_controle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="DEFINIÇÕES DAS ZONAS DE CONTROLE"
+                    android:textSize="@dimen/text_size_h6" />
+
+
+            </TableRow>
+
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_ferramentas_adequadas"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="FERRAMENTAS ADEQUADAS"
+                    android:textSize="@dimen/text_size_h6" />
+
+
+            </TableRow>
+
+            <TableRow>
+
+                <CheckBox
+                    android:id="@+id/checkBox_outros_choque_eletrico"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="OUTROS"
+                    android:textSize="@dimen/text_size_h6" />
+
+
+            </TableRow>
+
+            <TextView
+                android:id="@+id/txt_outros"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="24dp"
+                android:layout_weight="1"
+                android:text="CHOQUE ELÉTRICO"
+                android:textColor="#000000"
+                android:textSize="@dimen/text_size_h5"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/tableLayout22" />
+
+
+            <TextView
+                android:id="@+id/txt_outros_detalhes"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="24dp"
+                android:layout_weight="1"
+                android:text="(Agentes biológicos, etc...)"
+                android:textColor="#000000"
+                android:textSize="@dimen/text_size_h6"
+                app:layout_constraintLeft_toRightOf="@+id/txt_outros"
+                app:layout_constraintTop_toBottomOf="@+id/tableLayout22" />
+
+            <Spinner
+                android:id="@+id/spinner_outros"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:entries="@array/opcoes_sim_nao"
+                app:layout_constraintTop_toBottomOf="@+id/txt_outros_detalhes" />
+
+        </TableLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

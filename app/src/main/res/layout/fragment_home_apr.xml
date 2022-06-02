@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/top_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/txt_ose_oss"
+        android:layout_width="80dp"
+        android:layout_height="10pt"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="Ose/Oss"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:ignore="MissingConstraints" />
+
+
+    <EditText
+        android:id="@+id/edt_ose_oss"
+        android:layout_width="60dp"
+        android:layout_height="10pt"
+        android:layout_marginTop="10dp"
+        android:gravity="top"
+        android:background="#C5C5C5"
+        android:textColor="#000000"
+        app:layout_constraintStart_toEndOf="@+id/txt_ose_oss"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/txt_ost"
+        android:layout_width="30dp"
+        android:layout_height="10pt"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="Ost"
+        android:textColor="#000000"
+        app:layout_constraintStart_toEndOf="@+id/edt_ose_oss"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+
+
+
+    <EditText
+        android:id="@+id/edt_ost"
+        android:layout_width="60dp"
+        android:layout_height="10pt"
+        android:layout_marginTop="10dp"
+        android:background="#C5C5C5"
+        android:gravity="top"
+        android:textColor="#000000"
+        app:layout_constraintStart_toEndOf="@+id/txt_ost"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+
+    <TextView
+        android:id="@+id/txt_local_instalacao"
+        android:layout_width="40dp"
+        android:layout_height="10pt"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="Local"
+        android:textColor="#000000"
+        app:layout_constraintStart_toEndOf="@+id/edt_ost"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        />
+
+    <EditText
+        android:id="@+id/edt_local_instalacao"
+        android:layout_width="80dp"
+        android:layout_height="10pt"
+        android:layout_marginTop="10dp"
+        android:background="#C5C5C5"
+        android:layout_marginRight="30dp"
+        android:gravity="top"
+        android:textColor="#000000"
+        app:layout_constraintStart_toEndOf="@+id/txt_local_instalacao"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout2"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="190dp"
+        android:background="@color/green"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/baseline_playlist_add_check_black_18dp"
+            tools:ignore="HardcodedText"></com.google.android.material.tabs.TabItem>
+
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/baseline_warning_black_18dp"
+            tools:ignore="HardcodedText" />
+
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/baseline_person_black_18dp"
+            tools:ignore="HardcodedText" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/baseline_groups_black_18dp"
+            tools:ignore="HardcodedText" />
+
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/baseline_settings_applications_black_18dp"
+            tools:ignore="HardcodedText" />
+
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/baseline_add_black_18dp"
+            tools:ignore="HardcodedText" />
+
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <include
+        android:id="@+id/include1"
+        layout="@layout/fragment_apr_analise_risco"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        />
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/fragment_apr_risco_seguranca_meio_ambiente"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        />
+
+    <include
+        android:id="@+id/include3"
+        layout="@layout/fragment_apr_analise_pessoal"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        />
+
+    <include
+        android:id="@+id/include4"
+        layout="@layout/fragment_apr_equipe_trabalho"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        />
+
+    <include
+        android:id="@+id/include5"
+        layout="@layout/fragment_apr_epi"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        />
+
+    <include
+        android:id="@+id/include6"
+        layout="@layout/fragment_apr_outros"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

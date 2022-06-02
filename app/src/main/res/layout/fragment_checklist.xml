@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        android:background="@color/green"
+        layout="@layout/top_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/srollview"
+        android:layout_width="409dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="50dp"
+        android:fillViewport="true"
+        android:paddingBottom="@dimen/padding_large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/button_inspecao_veiculo"
+                style="@style/MenuFaturamento"
+                android:layout_height="68dp"
+                android:text="INSPEÇÃO DIÁRIA DE VEÍCULOS"
+                app:icon="@drawable/baseline_directions_car_black_18dp"
+                app:iconPadding="@dimen/icon_padding"
+                app:iconTint="@null"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                app:strokeColor="@color/lightGrey"
+                tools:ignore="NotSibling" />
+
+
+            <Button
+                android:id="@+id/button_checklist_EPI"
+                style="@style/MenuFaturamento"
+                android:layout_height="68dp"
+                android:text="CHECKLIST DIÁRIO EPI"
+                app:icon="@drawable/baseline_playlist_add_check_black_18dp"
+                app:iconPadding="@dimen/icon_padding"
+                app:iconTint="@null"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_inspecao_veiculo"
+                app:strokeColor="@color/lightGrey" />
+
+
+            <Button
+                android:id="@+id/button_checklist_EPC"
+                style="@style/MenuFaturamento"
+                android:layout_height="68dp"
+                android:text="CHECKLIST DIÁRIO EPC"
+                app:icon="@drawable/baseline_phone_android_black_18dp"
+                app:iconPadding="@dimen/icon_padding"
+                app:iconTint="@null"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_checklist_EPI"
+                app:strokeColor="@color/lightGrey" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
